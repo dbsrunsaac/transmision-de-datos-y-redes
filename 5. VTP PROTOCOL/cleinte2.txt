@@ -1,0 +1,21 @@
+enable
+configure terminal
+hostname VTP-CLIENT2
+!
+vtp domain EMPRESA
+vtp mode client
+vtp password cisco123
+vtp version 2
+NET3MAX · Guía de laboratorio Cisco Página 3
+!
+interface range fa0/1 - 2
+switchport mode trunk
+exit
+!
+interface vlan 1
+ip address 192.168.1.3 255.255.255.0
+no shutdown
+exit
+ip default-gateway 192.168.1.254
+end
+write memory

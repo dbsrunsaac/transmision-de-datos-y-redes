@@ -1,0 +1,36 @@
+enable
+configure terminal
+hostname VTP-SERVER
+!
+vtp domain EMPRESA
+vtp mode server
+vtp password cisco123
+vtp version 2
+!
+vlan 10
+name VENTAS
+exit
+vlan 20
+name CONTABILIDAD
+exit
+vlan 30
+name SOPORTE
+exit
+!
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+exit
+!
+interface range fa0/2 - 3
+switchport mode trunk
+exit
+!
+interface vlan 1
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+ip default-gateway 192.168.1.254
+end
+write memory

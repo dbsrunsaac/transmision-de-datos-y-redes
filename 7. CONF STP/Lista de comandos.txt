@@ -1,0 +1,53 @@
+Lista de comandos
+
+switchport mode trunk
+
+switchport trunk native vlan 99
+
+switchport trunk allowed vlan 10, 20, 30
+
+
+
+switchport mode trunk: Permite una conexión troncal para usar un puerto como nexo de comunicación entre las diferentes vlans (habilita la carretera)
+
+switchport trunk native vlan 99: vlan nativa usada principalmente para la transferencia de paquetes sin etiquetas (cada vlan agrega un etiqueta a sus paquetes para saber a cual pertenece)
+
+switchport trunk allowed vlan 10,20,30 : Por defecto mode trunk permite que todas las vlan creadas transmitan informaciòn, esto registre a las vlans requeridas (seguridad), para este caso la 10,20,30 (no debe tener espacios) 
+
+
+Configurar del router
+# Creación de sub interfaces a nivel de puerto
+
+conf t 
+interface g0/0.[sub interface] : ej.  g0/0.10 (vlan 10)
+encapsulation dot1q [sub interface] : ej. 10, 20 (según la vlan)
+ip address [dir ip] : ej. 172.16.81.1 255.255.240.0
+exit
+
+(Esto se repite para cada vlan)
+
+
+# Configurar el DHCP
+conf t
+ip dhcp pool [etiqueta/nombre] ej: dhcp-vlan-10
+network [ip red] [mask] ej. 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+exit
+
+ip dhcp excluded-address 192.168.10.1
+int g0/0.10
+ip helper-address 192.168.10.1
+
+
+ip dhcp pool: Permite habilitar la conexión DHCP y asociarla a una etiqueta
+network: Configura la dirección de red mediante el ID de red .10.0 y la máscara
+default-router: Configura el gateway o puerta de enlace
+
+ip dhcp excluded-address: Se excluye la ip utilizada (configurada para el gateway)
+interface g0/0.10 : Permite ingresar a la configuración de la sub interfaz (virtual), para este caso la 10
+ip helper-address [dir ip]: Asigna la configuración de la subinterfaz mediante la dirección del gateway.
+
+
+
+
+

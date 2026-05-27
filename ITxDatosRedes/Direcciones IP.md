@@ -13,7 +13,7 @@ TCP: Envía información y espera confirmación, usado en la transferencia de ar
 UDP: Solo envía sin confirmar, utilizado en com. de tiempo rael
 
 
-Mascara para las direcciones iP
+Mascara para las direcciones iP 
 A -> 255.0.0.0
 B -> 255.255.0.0
 C -> 255.255.255.0

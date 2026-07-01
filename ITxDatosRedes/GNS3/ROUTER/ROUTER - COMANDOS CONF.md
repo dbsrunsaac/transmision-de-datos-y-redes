@@ -30,3 +30,20 @@ Guardar la configuración
 Permite regresar al punto de inicio (modo administrador #)
 ### exit
 Permite salir de la interfaz de configuración actual a la previa
+
+### show ip route
+La re
+
+### do show ip route
+Ejecuta el comando **show ip route** sin la necesidad de ubicarse en la raíz de la configuración (#)
+
+### show ip protocol
+Muestra los protocolos ip configurados en el router
+
+## Ejemplo 
+
+R1: network 198.155.10.0
+R2: network 198.155.10.0
+R2: network 172.16.1.0
+R2: network 172.16.2.0
+R2: network 172.16.3.0

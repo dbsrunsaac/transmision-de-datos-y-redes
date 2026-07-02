@@ -35,10 +35,12 @@ Permite salir de la interfaz de configuración actual a la previa
 La re
 
 ### do show ip route
-Ejecuta el comando **show ip route** sin la necesidad de ubicarse en la raíz de la configuración (#)
+Ejecuta el comando **show ip route** sin la necesidad de ubicarse en la raíz de la configuración (#).
+> De forma general muestra la tabla de enrutamiento
 
 ### show ip protocol
 Muestra los protocolos ip configurados en el router
+
 
 ## Ejemplo 
 
@@ -47,3 +49,5 @@ R2: network 198.155.10.0
 R2: network 172.16.1.0
 R2: network 172.16.2.0
 R2: network 172.16.3.0
+
+###

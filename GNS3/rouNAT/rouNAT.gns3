@@ -17,11 +17,48 @@
     "topology": {
         "computes": [],
         "drawings": [],
-        "links": [],
+        "links": [
+            {
+                "filters": {},
+                "link_id": "6f05524e-c9ff-44a1-9fb0-17a943135462",
+                "link_style": {
+                    "color": "#000000",
+                    "type": 1,
+                    "width": 2
+                },
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "Wi-Fi",
+                            "x": 149,
+                            "y": 73
+                        },
+                        "node_id": "ba0a7734-2311-48c0-9dbe-b5f71acebf40",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f0/0",
+                            "x": -1,
+                            "y": 2
+                        },
+                        "node_id": "26b40933-09c8-427a-94a2-7d1a358c14f8",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            }
+        ],
         "nodes": [
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5005,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -70,7 +107,7 @@
                         22,
                         22
                     ],
-                    "slot0": "C7200-IO-FE",
+                    "slot0": "C7200-IO-2FE",
                     "slot1": null,
                     "slot2": null,
                     "slot3": null,
@@ -84,244 +121,84 @@
                 "symbol": ":/symbols/classic/router.svg",
                 "template_id": "0e9d84bb-d9a9-492c-82cf-18959e069603",
                 "width": 66,
-                "x": 124,
-                "y": -44,
+                "x": -153,
+                "y": -62,
                 "z": 1
             },
             {
                 "compute_id": "local",
-                "console": 5001,
-                "console_auto_start": false,
-                "console_type": "telnet",
-                "custom_adapters": [],
-                "first_port_name": null,
-                "height": 45,
-                "label": {
-                    "rotation": 0,
-                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "R2",
-                    "x": 20,
-                    "y": -25
-                },
-                "locked": false,
-                "name": "R2",
-                "node_id": "6a4a654a-a2c7-4167-9d12-da19707e4656",
-                "node_type": "dynamips",
-                "port_name_format": "Ethernet{0}",
-                "port_segment_size": 0,
-                "properties": {
-                    "auto_delete_disks": false,
-                    "aux": null,
-                    "clock_divisor": 4,
-                    "disk0": 0,
-                    "disk1": 0,
-                    "dynamips_id": 2,
-                    "exec_area": 64,
-                    "idlemax": 500,
-                    "idlepc": "0x60630d08",
-                    "idlesleep": 30,
-                    "image": "c7200-adventerprisek9-mz.153-3.XB12.image",
-                    "image_md5sum": "3d234a3793331c972776354531f87221",
-                    "mac_addr": "ca02.08bc.0000",
-                    "midplane": "vxr",
-                    "mmap": true,
-                    "npe": "npe-400",
-                    "nvram": 512,
-                    "platform": "c7200",
-                    "power_supplies": [
-                        1,
-                        1
-                    ],
-                    "ram": 512,
-                    "sensors": [
-                        22,
-                        22,
-                        22,
-                        22
-                    ],
-                    "slot0": "C7200-IO-FE",
-                    "slot1": null,
-                    "slot2": null,
-                    "slot3": null,
-                    "slot4": null,
-                    "slot5": null,
-                    "slot6": null,
-                    "sparsemem": true,
-                    "system_id": "FTX0945W0MY",
-                    "usage": ""
-                },
-                "symbol": ":/symbols/classic/router.svg",
-                "template_id": "0e9d84bb-d9a9-492c-82cf-18959e069603",
-                "width": 66,
-                "x": -41,
-                "y": -47,
-                "z": 1
-            },
-            {
-                "compute_id": "local",
-                "console": 5002,
+                "console": null,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": null,
-                "height": 32,
+                "height": 71,
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "Switch1",
-                    "x": 5,
+                    "text": "Cloud1",
+                    "x": 52,
                     "y": -25
                 },
                 "locked": false,
-                "name": "Switch1",
-                "node_id": "8f59e31e-dcae-4535-a7a2-9a5f99770a29",
-                "node_type": "ethernet_switch",
+                "name": "Cloud1",
+                "node_id": "ba0a7734-2311-48c0-9dbe-b5f71acebf40",
+                "node_type": "cloud",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
                 "properties": {
+                    "interfaces": [
+                        {
+                            "name": "Wi-Fi",
+                            "special": true,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "Ethernet",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "Conexi\u00f3n de red Bluetooth",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "vEthernet (Default Switch)",
+                            "special": true,
+                            "type": "ethernet"
+                        }
+                    ],
                     "ports_mapping": [
                         {
-                            "name": "Ethernet0",
+                            "interface": "Ethernet",
+                            "name": "Ethernet",
                             "port_number": 0,
-                            "type": "access",
-                            "vlan": 1
+                            "type": "ethernet"
                         },
                         {
-                            "name": "Ethernet1",
+                            "interface": "Conexi\u00f3n de red Bluetooth",
+                            "name": "Conexi\u00f3n de red Bluetooth",
                             "port_number": 1,
-                            "type": "access",
-                            "vlan": 1
+                            "type": "ethernet"
                         },
                         {
-                            "name": "Ethernet2",
+                            "interface": "Wi-Fi",
+                            "name": "Wi-Fi",
                             "port_number": 2,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet3",
-                            "port_number": 3,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet4",
-                            "port_number": 4,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet5",
-                            "port_number": 5,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet6",
-                            "port_number": 6,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet7",
-                            "port_number": 7,
-                            "type": "access",
-                            "vlan": 1
+                            "type": "ethernet"
                         }
-                    ]
+                    ],
+                    "remote_console_host": "",
+                    "remote_console_http_path": "/",
+                    "remote_console_port": 23,
+                    "remote_console_type": "none"
                 },
-                "symbol": ":/symbols/ethernet_switch.svg",
-                "template_id": "1966b864-93e7-32d5-965f-001384eec461",
-                "width": 72,
-                "x": -199,
-                "y": -40,
-                "z": 1
-            },
-            {
-                "compute_id": "local",
-                "console": 5003,
-                "console_auto_start": false,
-                "console_type": "telnet",
-                "custom_adapters": [],
-                "first_port_name": null,
-                "height": 59,
-                "label": {
-                    "rotation": 0,
-                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "PC1",
-                    "x": 15,
-                    "y": -25
-                },
-                "locked": false,
-                "name": "PC1",
-                "node_id": "f30af397-91d9-477a-b36b-c69d0fd30277",
-                "node_type": "vpcs",
-                "port_name_format": "Ethernet{0}",
-                "port_segment_size": 0,
-                "properties": {},
-                "symbol": ":/symbols/vpcs_guest.svg",
-                "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
-                "width": 65,
-                "x": -374,
-                "y": -141,
-                "z": 1
-            },
-            {
-                "compute_id": "local",
-                "console": 5005,
-                "console_auto_start": false,
-                "console_type": "telnet",
-                "custom_adapters": [],
-                "first_port_name": null,
-                "height": 59,
-                "label": {
-                    "rotation": 0,
-                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "PC2",
-                    "x": 15,
-                    "y": -25
-                },
-                "locked": false,
-                "name": "PC2",
-                "node_id": "ee4c89e2-a864-4123-8ebe-26beb724bc62",
-                "node_type": "vpcs",
-                "port_name_format": "Ethernet{0}",
-                "port_segment_size": 0,
-                "properties": {},
-                "symbol": ":/symbols/vpcs_guest.svg",
-                "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
-                "width": 65,
-                "x": -374,
-                "y": -15,
-                "z": 1
-            },
-            {
-                "compute_id": "local",
-                "console": 5007,
-                "console_auto_start": false,
-                "console_type": "telnet",
-                "custom_adapters": [],
-                "first_port_name": null,
-                "height": 59,
-                "label": {
-                    "rotation": 0,
-                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "PC3",
-                    "x": 15,
-                    "y": -25
-                },
-                "locked": false,
-                "name": "PC3",
-                "node_id": "6e5f9e5f-3d49-4844-952f-9bcccb7ced65",
-                "node_type": "vpcs",
-                "port_name_format": "Ethernet{0}",
-                "port_segment_size": 0,
-                "properties": {},
-                "symbol": ":/symbols/vpcs_guest.svg",
-                "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
-                "width": 65,
-                "x": -373,
-                "y": 110,
+                "symbol": ":/symbols/cloud.svg",
+                "template_id": "39e257dc-8412-3174-b6b3-0ee3ed6a43e9",
+                "width": 159,
+                "x": -400,
+                "y": -186,
                 "z": 1
             }
         ]

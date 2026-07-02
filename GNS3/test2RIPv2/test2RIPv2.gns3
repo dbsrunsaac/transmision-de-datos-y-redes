@@ -97,8 +97,8 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "Ethernet",
-                            "x": 167,
-                            "y": 52
+                            "x": 150,
+                            "y": 38
                         },
                         "node_id": "a25975a0-5747-4507-b880-fe3689c753d5",
                         "port_number": 0
@@ -445,7 +445,7 @@
                 "compute_id": "local",
                 "console": null,
                 "console_auto_start": false,
-                "console_type": null,
+                "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": null,
                 "height": 71,
@@ -483,6 +483,11 @@
                             "name": "vEthernet (Default Switch)",
                             "special": true,
                             "type": "ethernet"
+                        },
+                        {
+                            "name": "vEthernet (WSL)",
+                            "special": true,
+                            "type": "ethernet"
                         }
                     ],
                     "ports_mapping": [
@@ -507,8 +512,8 @@
                 "symbol": ":/symbols/cloud.svg",
                 "template_id": "39e257dc-8412-3174-b6b3-0ee3ed6a43e9",
                 "width": 159,
-                "x": -486,
-                "y": -189,
+                "x": -523,
+                "y": -188,
                 "z": 1
             },
             {
@@ -714,7 +719,7 @@
                 "symbol": ":/symbols/classic/router.svg",
                 "template_id": "0e9d84bb-d9a9-492c-82cf-18959e069603",
                 "width": 66,
-                "x": -231,
+                "x": -230,
                 "y": 124,
                 "z": 1
             },
@@ -783,8 +788,8 @@
                 "symbol": ":/symbols/classic/router.svg",
                 "template_id": "0e9d84bb-d9a9-492c-82cf-18959e069603",
                 "width": 66,
-                "x": -226,
-                "y": -114,
+                "x": -236,
+                "y": -116,
                 "z": 1
             },
             {

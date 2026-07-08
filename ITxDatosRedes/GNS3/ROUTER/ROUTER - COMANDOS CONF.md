@@ -25,12 +25,7 @@ Mostrar en pantalla el estado actual de los puertos mediante una lista (muestra 
 ### copy running-config startup-config
 Permite copiar la configuración que se esta ejecutando (almacenada en la memoria RAM) en la configuración inicial almacenada memoria NVRAM del router (no volátil), permitiendo guardar las configuraciones realizadas para no perderlas en caso del reinicio o apagado del router.
 ### wr
-Guardar la configuración
-### end
-Permite regresar al punto de inicio (modo administrador #)
-### exit
-Permite salir de la interfaz de configuración actual a la previa
-
+Guardar la configuración en memoria NVRAM (No Volatile RAM)
 ### show ip route
 La re
 
@@ -41,13 +36,7 @@ Ejecuta el comando **show ip route** sin la necesidad de ubicarse en la raíz de
 ### show ip protocol
 Muestra los protocolos ip configurados en el router
 
-
-## Ejemplo 
-
-R1: network 198.155.10.0
-R2: network 198.155.10.0
-R2: network 172.16.1.0
-R2: network 172.16.2.0
-R2: network 172.16.3.0
-
-###
+### end
+Permite regresar al punto de inicio (modo administrador #)
+### exit
+Permite salir de la interfaz de configuración actual a la previa.

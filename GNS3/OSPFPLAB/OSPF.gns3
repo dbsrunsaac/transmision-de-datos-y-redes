@@ -79,6 +79,33 @@
                 "x": -43,
                 "y": -155,
                 "z": 2
+            },
+            {
+                "drawing_id": "edf0c4b6-7393-4f0f-899a-cf6d977db905",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"42\" height=\"88\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">OSPF\nR3\nR4\nR5\n </text></svg>",
+                "x": -474,
+                "y": 81,
+                "z": 2
+            },
+            {
+                "drawing_id": "cc6a15a4-3caa-4903-a2c4-38fd66ac7044",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"49\" height=\"56\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">EIGRP\nR1\nR2 </text></svg>",
+                "x": -415,
+                "y": 82,
+                "z": 2
+            },
+            {
+                "drawing_id": "656fa2b0-6085-44cc-ba69-5b39eb3730f7",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"160\" height=\"88\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">Tarea\nEnvio de paquetes de:\nPC -&gt; R1 (10.100.1.0)\nEs necesario comunicar\nambos protocolos </text></svg>",
+                "x": -324,
+                "y": 91,
+                "z": 2
             }
         ],
         "links": [
